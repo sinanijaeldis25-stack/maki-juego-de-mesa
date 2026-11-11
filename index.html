@@ -1,14 +1,577 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HOLA MUNDO</h1>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAKI: aprende Lengua de Señas Boliviana jugando.">
+  <title>MAKI | Aprende, juega y conecta</title>
 
-    <nav></nav>
-    <main></main>
+  <!-- TIPOGRAFÍA NUNITO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EMAILJS: CONFIGURACIÓN ORIGINAL -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ========== NAV MORADO ========== -->
+  <header class="encabezado">
+    <nav class="navegacion contenedor" aria-label="Navegación principal">
+
+      <!-- IMAGEN 01: LOGO OFICIAL -->
+      <a href="#inicio" class="marca efecto-logo">
+        <img src="img/Mejora del logo MAKI-05.png"
+             alt="Logo oficial de MAKI"
+             class="logo-maki">
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu" id="menu-principal">
+        <li><a href="#inicio" class="activo">Inicio</a></li>
+        <li><a href="#componentes">El juego</a></li>
+        <li><a href="#reglas">Cómo jugar</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto" id="abrir-contacto">Contacto</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== INICIO ========== -->
+    <section id="inicio" class="inicio">
+      <div class="contenedor inicio-grid">
+
+        <div class="inicio-contenido">
+          <p class="etiqueta">APRENDE · JUEGA · CONECTA</p>
+
+          <h1>
+            Las manos<br>
+            también<br>
+            <span>hablan.</span>
+          </h1>
+
+          <p class="inicio-descripcion">
+            Con MAKI, aprende Lengua de Señas Boliviana
+            a través de una experiencia compartida,
+            divertida y cercana. ¡Juega y descubre
+            una nueva forma de comunicarte!
+          </p>
+
+          <div class="inicio-botones">
+            <a href="#componentes" class="boton boton-celeste">
+              Descubre el juego →
+            </a>
+
+            <a href="#reglas" class="boton boton-morado">
+              ¿Cómo se juega?
+            </a>
+          </div>
+        </div>
+
+        <div class="inicio-visual">
+          <div class="forma-morada"></div>
+          <span class="decoracion decoracion-uno" aria-hidden="true">✦</span>
+          <span class="decoracion decoracion-dos" aria-hidden="true">✦</span>
+
+          <!-- IMAGEN 02: PERSONAJE MAKI -->
+          <!-- Cambia personaje-maki.png por tu PNG sin fondo -->
+          <img src="img/MASCOTA DE INICIO.png"
+               alt="Personaje de MAKI saludando"
+               class="personaje efecto-personaje">
+        </div>
+
+      </div>
+
+      <div class="onda-inicio" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== COMPONENTES ========== -->
+    <section id="componentes" class="seccion componentes">
+      <div class="contenedor">
+
+        <div class="seccion-titulo">
+          <p class="etiqueta">DESCUBRE MAKI</p>
+          <h2>¿Qué incluye <span>MAKI?</span></h2>
+          <p>
+            Conoce los elementos que forman parte
+            de esta experiencia de aprendizaje.
+          </p>
+        </div>
+
+        <div class="componentes-grid">
+
+          <!-- IMAGEN 03: TABLERO REAL -->
+          <article class="tarjeta-componente">
+            <div class="componente-foto">
+              <img src="img/tablero.jpg"
+                   alt="Fotografía real del tablero de MAKI"
+                   loading="lazy">
+            </div>
+            <div class="componente-texto">
+              <h3>Tablero</h3>
+              <p>
+                Contiene las imágenes que los jugadores
+                deben relacionar con las señas.
+              </p>
+            </div>
+          </article>
+
+          <!-- IMAGEN 04: FICHAS REALES -->
+          <article class="tarjeta-componente">
+            <div class="componente-foto">
+              <img src="img/fichas.jpg"
+                   alt="Fotografía real de las fichas de MAKI"
+                   loading="lazy">
+            </div>
+            <div class="componente-texto">
+              <h3>Fichas</h3>
+              <p>
+                Muestran señas y significados que
+                deben identificarse en el tablero.
+              </p>
+            </div>
+          </article>
+
+          <!-- IMAGEN 05: CARTAS REALES -->
+          <article class="tarjeta-componente">
+            <div class="componente-foto">
+              <img src="img/cartas.jpg"
+                   alt="Fotografía real de las cartas de MAKI"
+                   loading="lazy">
+            </div>
+            <div class="componente-texto">
+              <h3>Cartas</h3>
+              <p>
+                Espacio reservado para mostrar
+                las cartas reales del juego.
+              </p>
+            </div>
+          </article>
+
+          <!-- IMAGEN 06: DADOS REALES -->
+          <article class="tarjeta-componente">
+            <div class="componente-foto">
+              <img src="img/dados.jpg"
+                   alt="Fotografía real de los dados de MAKI"
+                   loading="lazy">
+            </div>
+            <div class="componente-texto">
+              <h3>Dados</h3>
+              <p>
+                Espacio reservado para mostrar
+                los dados reales del juego.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REGLAS DEL JUEGO ========== -->
+    <section id="reglas" class="seccion reglas">
+      <div class="contenedor">
+
+        <div class="seccion-titulo">
+          <p class="etiqueta">APRENDE A JUGAR</p>
+          <h2>Reglas de <span>MAKI</span></h2>
+          <p>
+            ¡Observa, reconoce y conecta!
+            Aprende Lengua de Señas Boliviana jugando.
+          </p>
+        </div>
+
+        <div class="reglas-resumen">
+          <div class="resumen-dato">
+            <strong>2 a 4</strong>
+            <span>Jugadores recomendados</span>
+          </div>
+
+          <div class="resumen-dato">
+            <strong>6</strong>
+            <span>Fichas por jugador</span>
+          </div>
+
+          <div class="resumen-dato">
+            <strong>1 punto</strong>
+            <span>Por partida ganada</span>
+          </div>
+        </div>
+
+        <div class="objetivo-juego">
+          <div class="objetivo-icono" aria-hidden="true">★</div>
+          <div>
+            <h3>Objetivo del juego</h3>
+            <p>
+              Sé el primero en colocar correctamente
+              tus seis fichas sobre las imágenes
+              correspondientes del tablero.
+              Reconoce las señas y acumula puntos
+              para ganar la ronda.
+            </p>
+          </div>
+        </div>
+
+        <div class="reglas-grid">
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">01</div>
+            <h3>Preparación</h3>
+            <ul>
+              <li>Coloca el tablero en el centro.</li>
+              <li>Mezcla y reparte 6 fichas a cada jugador.</li>
+              <li>Reserva las fichas restantes.</li>
+              <li>Cada jugador mantiene sus fichas frente a sí.</li>
+            </ul>
+          </article>
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">02</div>
+            <h3>¿Cómo se juega?</h3>
+            <ul>
+              <li>Todos participan simultáneamente.</li>
+              <li>Observa la seña y lee su significado.</li>
+              <li>Busca la imagen correspondiente.</li>
+              <li>Coloca tu ficha y continúa con las demás.</li>
+            </ul>
+            <p class="nota-regla">
+              Cada imagen se utiliza una sola vez.
+              Las fichas permanecen sobre el tablero.
+            </p>
+          </article>
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">03</div>
+            <h3>¿Quién gana la partida?</h3>
+            <ul>
+              <li>Gana quien coloque correctamente todas sus fichas primero.</li>
+              <li>El ganador recibe 1 punto.</li>
+              <li>Sus fichas se retiran a la zona de utilizadas.</li>
+              <li>Los demás continúan hasta completar sus fichas.</li>
+            </ul>
+          </article>
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">04</div>
+            <h3>Desempate</h3>
+            <ul>
+              <li>Los demás jugadores eligen una ficha al azar y ocultan su significado.</li>
+              <li>Los empatados identifican la seña en voz alta, sin ayuda.</li>
+              <li>Gana quien responda correctamente primero.</li>
+              <li>Si nadie acierta, se hace una segunda y última prueba.</li>
+            </ul>
+            <p class="nota-regla">
+              Si nadie acierta en el segundo intento,
+              la partida se anula. Los demás jugadores
+              muestran las fichas y verifican las respuestas.
+            </p>
+          </article>
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">05</div>
+            <h3>Nuevas partidas y puntos</h3>
+            <ul>
+              <li>Las fichas utilizadas se apartan y no se reutilizan durante la ronda.</li>
+              <li>Reparte 6 fichas nuevas a cada jugador.</li>
+              <li>Cada partida ganada suma 1 punto.</li>
+              <li>La ronda termina cuando no alcanzan las fichas para todos.</li>
+              <li>Gana la ronda quien tenga más puntos.</li>
+            </ul>
+          </article>
+
+          <article class="tarjeta-regla">
+            <div class="regla-numero">06</div>
+            <h3>Nueva ronda</h3>
+            <ul>
+              <li>Recupera las fichas utilizadas y las sobrantes.</li>
+              <li>Mézclalas nuevamente.</li>
+              <li>Reinicia el conteo de puntos.</li>
+              <li>¡Comienza una nueva ronda!</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="reglas-mensaje">
+          <h3>¡OBSERVA, RECONOCE Y CONECTA!</h3>
+          <p>
+            Cada partida es una nueva oportunidad
+            para aprender Lengua de Señas Boliviana.
+          </p>
+          <a href="#componentes" class="boton boton-celeste">
+            Conoce los componentes →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== NOSOTROS ========== -->
+    <section id="nosotros" class="seccion nosotros">
+      <div class="contenedor">
+
+        <div class="seccion-titulo titulo-claro">
+          <p class="etiqueta">CONÓCENOS</p>
+          <h2>Nosotros</h2>
+          <p>
+            MAKI nace con la idea de aprender,
+            compartir y conectar a través del juego.
+          </p>
+        </div>
+
+        <div class="nosotros-grid">
+
+          <article class="tarjeta-nosotros">
+            <div class="nosotros-icono" aria-hidden="true">✦</div>
+            <h3>Nuestra misión</h3>
+            <p>
+              Promover el aprendizaje de la Lengua
+              de Señas Boliviana mediante una experiencia
+              educativa, divertida e inclusiva que permita
+              conectar a las personas.
+            </p>
+          </article>
+
+          <article class="tarjeta-nosotros">
+            <div class="nosotros-icono" aria-hidden="true">✦</div>
+            <h3>Nuestra visión</h3>
+            <p>
+              Convertir a MAKI en una propuesta
+              que acerque a más personas a la Lengua
+              de Señas Boliviana, fomentando
+              la comunicación y la inclusión.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EQUIPO ========== -->
+    <section id="equipo" class="seccion equipo">
+      <div class="contenedor">
+
+        <div class="seccion-titulo">
+          <p class="etiqueta">NUESTRO EQUIPO</p>
+          <h2>Las mentes detrás de <span>MAKI</span></h2>
+          <p>
+            Cuatro personas que unieron sus ideas
+            y creatividad para dar vida a MAKI.
+          </p>
+        </div>
+
+        <div class="equipo-grid">
+
+          <!-- IMAGEN 07: INTEGRANTE 1 -->
+          <article class="integrante">
+            <div class="integrante-foto">
+              <img src="img/JACKSON.png"
+                   alt="Fotografía del integrante 1"
+                   loading="lazy">
+            </div>
+            <h3>Nombre del integrante 1</h3>
+            <p>Equipo MAKI</p>
+          </article>
+
+          <!-- IMAGEN 08: INTEGRANTE 2 -->
+          <article class="integrante">
+            <div class="integrante-foto">
+              <img src="img/eeeeeee.jpeg"
+                   alt="Fotografía del integrante 2"
+                   loading="lazy">
+            </div>
+            <h3>Nombre del integrante 2</h3>
+            <p>Equipo MAKI</p>
+          </article>
+
+          <!-- IMAGEN 09: INTEGRANTE 3 -->
+          <article class="integrante">
+            <div class="integrante-foto">
+              <img src="img/2.jpeg"
+                   alt="Fotografía del integrante 3"
+                   loading="lazy">
+            </div>
+            <h3>Nombre del integrante 3</h3>
+            <p>Equipo MAKI</p>
+          </article>
+
+          <!-- IMAGEN 10: INTEGRANTE 4 -->
+          <article class="integrante">
+            <div class="integrante-foto">
+              <img src="img/integrante4.jpg"
+                   alt="Fotografía del integrante 4"
+                   loading="lazy">
+            </div>
+            <h3>Nombre del integrante 4</h3>
+            <p>Equipo MAKI</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="seccion contacto">
+      <div class="contenedor contacto-presentacion">
+
+        <p class="etiqueta">HABLEMOS</p>
+        <h2>Conecta con <span>MAKI</span></h2>
+        <p>
+          ¿Tienes preguntas sobre nuestro juego?
+          ¡Nos encantará escucharte!
+        </p>
+
+        <button type="button"
+                class="boton boton-celeste"
+                id="abrir-contacto-seccion">
+          Escríbenos →
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FORMULARIO EMERGENTE ========== -->
+  <div class="contacto-overlay"
+       id="contacto-modal"
+       aria-hidden="true">
+
+    <div class="contacto-ventana"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="contacto-titulo"
+         tabindex="-1">
+
+      <button type="button"
+              class="contacto-cerrar"
+              id="cerrar-contacto"
+              aria-label="Cerrar formulario">
+        &times;
+      </button>
+
+      <div class="contacto-cabecera">
+        <p class="etiqueta">APRENDE · JUEGA · CONECTA</p>
+        <h2 id="contacto-titulo">Contacto <span>MAKI</span></h2>
+        <p>Envíanos tus dudas, ideas o comentarios.</p>
+      </div>
+
+      <!-- FORMULARIO DE TU AMIGO: CAMPOS ORIGINALES -->
+      <form id="contactForm">
+
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Tu nombre completo">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="ejemplo@correo.com">
+
+          <div class="error-message" id="emailError">
+            Por favor, introduce un correo válido.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Asunto</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Motivo de tu mensaje">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="Ej: +591 71234567">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit"
+                id="submitBtn"
+                class="boton boton-celeste boton-enviar">
+          Enviar Mensaje
+        </button>
+
+        <p id="formStatus" role="status" aria-live="polite"></p>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ========== PIE DE PÁGINA ========== -->
+  <footer class="pie">
+    <div class="contenedor pie-contenido">
+
+      <div class="pie-marca">
+        <a href="#inicio" class="marca marca-pie">
+          <!-- IMAGEN 11: LOGO DEL PIE DE PÁGINA -->
+          <img src="img/Mejora del logo MAKI-05.png"
+               alt="Logo MAKI"
+               class="logo-maki">
+        </a>
+        <p>Aprende · Juega · Conecta</p>
+      </div>
+
+      <div class="pie-enlaces">
+        <a href="#inicio">Inicio</a>
+        <a href="#componentes">El juego</a>
+        <a href="#reglas">Reglas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto" id="abrir-contacto-footer">Contacto</a>
+      </div>
+
+    </div>
+
+    <div class="pie-final">
+      <p>© MAKI — Proyecto educativo de Lengua de Señas Boliviana</p>
+    </div>
+  </footer>
+
 </body>
-</html>
+</html> 
