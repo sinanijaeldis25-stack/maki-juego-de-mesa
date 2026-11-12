@@ -1,0 +1,85 @@
+/* =========================================
+   MAKI - VENTANA PARA VIDEO VERTICAL
+   Estilos aislados: no modifican el diseño original.
+========================================= */
+
+.video-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 3100;
+  background: rgba(20, 10, 35, 0.7);
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.video-overlay.abierto {
+  display: flex;
+}
+
+.video-ventana {
+  position: relative;
+  width: min(360px, 100%);
+  max-height: 94vh;
+  overflow-y: auto;
+  background: #FFFFFF;
+  color: #34175C;
+  border: 3px solid #3CD7CD;
+  border-radius: 25px;
+  padding: 24px 16px 16px;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+}
+
+.video-ventana h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  padding: 0 40px;
+  margin: 0 0 16px;
+}
+
+.video-cerrar {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #34175C;
+  color: #FFFFFF;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-reproductor {
+  display: block;
+  width: auto;
+  height: min(68vh, 570px);
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  margin: auto;
+  object-fit: contain;
+  background: #000000;
+  border-radius: 13px;
+}
+
+.video-error {
+  margin-top: 12px;
+  color: #34175C;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.video-cerrar:focus-visible,
+.video-reproductor:focus-visible {
+  outline: 3px solid #F08C19;
+  outline-offset: 3px;
+}
